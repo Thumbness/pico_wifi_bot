@@ -4,6 +4,11 @@ from time import sleep
 from picozero import pico_temp_sensor, pico_led
 import machine
 
+### To Do: ###
+# Create GUI that allows PICO to scan for access points and for user to select SSID and input SSID PW
+# Research into how to flash code to PICO, such that GUI runs on Boot
+
+
 ssid = 'Sherwizzle'
 WPA2 = 'tofuopie8'
 
@@ -38,7 +43,6 @@ def webpage(temperature, state):
     html = f"""
             <!DOCTYPE html>
             <html>
-
             <body>
                 <form action="./lighton">
                     <input type="submit" value="Light on" />
@@ -49,7 +53,6 @@ def webpage(temperature, state):
                 <p>LED is {state} </p>
                 <p>Temperature is {temperature}</p>
             </body>
-
             </html>
             """
     return str(html)
