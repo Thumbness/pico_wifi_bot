@@ -11,15 +11,12 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 
   ## Current implementation idea:
   - 5 event driven functions that will action the bot (arms, body, LED's)
-  - basic website that can 'publish' an enumeration of chars/ints that an MQTT or similar server will listen for,
-  - PICO_bot will wait for MQTT server to publish char/int to PICO
-  - Pico_bot performs function (action) correlating with received case 
+  - basic website that publish data input from user to PICO_bot (movement, LED's, text to LED's strip (maybe))
 
 # Things to learn:
 ## Fundamentals for RPi Pico
 - Programming (flashing?) a pico via serial connectivity 
-- pico WIFI connectivity (socket connectivity could come in handy for browser API calls)
-- MQTT implementation (publish/subscribe)
+- pico WIFI connectivity (socket connectivity could come in handy for browser HTML calls)
 - #How to do anything
 
 ## Hosting a basic website
@@ -30,7 +27,9 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 - Basic HTML containing pico_bot movement function calls via MQTT api calls
 
 ## For later....
-- Create a small tkinter GUI that the user can create a "sequence" of actions for the robot to perform
+- Learn how to get pico to 'autorun' program on startup
+- EXE package?
+  - Create a small tkinter GUI.exe that the user can connect WIFI / create a "sequence" of actions for the robot to perform
 - More functionality for the bot (LED screen for eyes (user could draw a face and print to screen??) #idea
 
 ## Things to think about
