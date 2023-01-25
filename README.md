@@ -18,7 +18,7 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 # Things to learn:
 ## Fundamentals for RPi Pico
 - Programming (flashing?) a pico via serial connectivity 
-- pico WIFI connectivity
+- pico WIFI connectivity (socket connectivity could come in handy for browser API calls)
 - MQTT implementation (publish/subscribe)
 - #How to do anything
 
@@ -27,9 +27,6 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 - Host site on a server (potential for learning/utilising AWS free tier - EC2 instance for website)
 - Basic HTML containing pico_bot movement function calls via MQTT api calls
 
-## Hosting publish/ subscribe server
-- AWS EC2 ??
-
 ## For later....
 - Create a small tkinter GUI that the user can create a "sequence" of actions for the robot to perform
 - More functionality for the bot (LED screen for eyes (user could draw a face and print to screen??) #idea
@@ -37,3 +34,5 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 ## Things to think about
 There's a chance that i may not need to host a seperate MQTT server to listen for web-app signals, but for the purpose of learning
 
+# Learning Resources:
+- https://projects.raspberrypi.org/en/projects/get-started-pico-w/1
