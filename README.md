@@ -1,5 +1,5 @@
 # pico_wifi_bot
-## A small robot/toy that can be controlled via a small browser app using MQTT
+## A small robot/toy that can be controlled via a small browser app
 
 ## What is it?
 This project is dedicated towards learning/implementing a wide aspect of technologies.
