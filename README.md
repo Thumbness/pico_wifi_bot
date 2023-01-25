@@ -25,6 +25,8 @@ We're hoping to get just the basic functionality of the bot working, nothing too
 ## Hosting a basic website
 - learning Django for creating basic website (nothing flashy)
 - Host site on a server (potential for learning/utilising AWS free tier - EC2 instance for website)
+- OR
+- Host site on the pico itself
 - Basic HTML containing pico_bot movement function calls via MQTT api calls
 
 ## For later....
