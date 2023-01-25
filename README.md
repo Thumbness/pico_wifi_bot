@@ -39,5 +39,6 @@ There's a chance that i may not need to host a seperate MQTT server to listen fo
 # Learning Resources:
 - https://projects.raspberrypi.org/en/projects/get-started-pico-w/1
 - https://www.digikey.com.au/en/maker/blogs/2021/how-to-control-servo-motors-with-a-raspberry-pi#:~:text=To%20make%20a%20Raspberry%20Pi,the%20power%20supply%20as%20well.
+- https://dronebotworkshop.com/pi-pico/
 ## Multi-threading?? if needed
   - https://subscription.packtpub.com/book/hardware-and-creative/9781783551590/4/ch04lvl1sec21/threading#:~:text=Multithreading%20allows%20an%20application%20to,in%20switch%20and%20sensor%20states.
