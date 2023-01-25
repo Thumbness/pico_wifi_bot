@@ -1,4 +1,4 @@
-## pico_wifi_bot
+# pico_wifi_bot
 # A small robot/toy that can be controlled via a small browser app using MQTT
 
 ## What is it?
@@ -9,7 +9,7 @@ It will be a small robot that has limited amount of actions that can be called v
 Learning the fundamental basics of IoT.
 We're hoping to get just the basic functionality of the bot working, nothing too special for now.
 
-  # Current implementation idea:
+  ## Current implementation idea:
   - 5 event driven functions that will action the bot (arms, body, LED's)
   - basic website that can 'publish' an enumeration of chars/ints that an MQTT or similar server will listen for,
   - PICO_bot will wait for MQTT server to publish char/int to PICO
