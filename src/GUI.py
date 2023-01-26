@@ -33,8 +33,8 @@ def on_WPA2_submit():
     if password:
         user_confirm = messagebox.askquestion("Authenticating", "Connect to " + selected_ssid + "?")
         if user_confirm == "yes":
-            with open("user_network_authentication_check.txt", "w") as file:
-                network_input = str(selected_ssid + ", " + password)
+            with open("src/user_network_authentication_check.txt", "w") as file:
+                network_input = str(selected_ssid + " " + password)
                 file.write(network_input)
                 root.destroy()
         else:
