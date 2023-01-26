@@ -9,18 +9,21 @@ import machine
 # Research into how to flash code to PICO, such that GUI runs on Boot
 
 
-ssid = ''
-WPA2 = ''
+def get_wifi_cred():
+    with open("user_network_authentication_check.txt", "r") as f:
+        line = f.readline()
+        line = line.split() 
+        ssid = line[0]
+        WPA2 = line[1]
+    return ssid, WPA2
 
-def connect():
+def connect(ssid, WPA2):
     #Connect to WLAN
+    print(ssid, WPA2)
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    networks = wlan.scan() 
-    print("Available networks:\n")
-    for line in networks:
-        print(line[0].decode())
-        wlan.connect(ssid, WPA2)
+    wlan.connect(ssid, WPA2)
+    print(wlan.ifconfig())
         
     while wlan.isconnected() == False:
         print('Waiting for connection...')
@@ -84,7 +87,8 @@ def serve(connection):
         
 def main():
     try:
-        pico_ip = connect()
+        ssid, WPA2 = get_wifi_cred()
+        pico_ip = connect(ssid, WPA2)
         connection = open_socket(pico_ip)
         serve(connection)
         
