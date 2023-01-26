@@ -3,13 +3,15 @@ import socket
 from time import sleep
 from picozero import pico_temp_sensor, pico_led
 import machine
-
+import os
 ### To Do: ###
-# Create GUI that allows PICO to scan for access points and for user to select SSID and input SSID PW
-# Research into how to flash code to PICO, such that GUI runs on Boot
+# Find suitable method to store local machine text file data into PICO home, text file data contains SSID/WPA information for pico to autoConnect to WIFI
 
 
 def get_wifi_cred():
+    # maybe use os scp to pull local txt file into pico home??
+    # Needs more research
+    os.system("scp C:/Users/facef/OneDrive/Documents/GitHub/pico_wifi_bot/src/dist/user_network_authentication_check.txt <pi>@<192.168.15.67>:~/")
     with open("user_network_authentication_check.txt", "r") as f:
         line = f.readline()
         line = line.split() 

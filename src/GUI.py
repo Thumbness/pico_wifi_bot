@@ -2,6 +2,13 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 
+# This .py is to be used as first point of contact for user.
+# It will be packaged into a .exe where user downloads relative PICO packages (eventually.. maybe)
+
+### To Do ###
+# on WPA_submit method: store auth.txt in top_level dir??
+
+
 def scan_for_networks():
     # Use subprocess library to scan for Networks
     output = subprocess.check_output(["netsh", "wlan", "show", "networks"])
@@ -19,12 +26,14 @@ def scan_for_networks():
     return ssid_list
 
 def on_ssid_select(event):
+    #Wait for user to click on SSID 
     selection = listbox.curselection()
     if len(selection) == 0:
         return
+    #Store ssid as var
     ssid = listbox.get(listbox.curselection()[0])
     messagebox.showinfo("Selected SSID", f"You selected: {ssid}")
-    global selected_ssid
+    global selected_ssid #find better solution to global
     selected_ssid = ssid
     ssid_entry.insert(0, selected_ssid)
 
@@ -33,11 +42,13 @@ def on_WPA2_submit():
     if password:
         user_confirm = messagebox.askquestion("Authenticating", "Connect to " + selected_ssid + "?")
         if user_confirm == "yes":
-            with open("src/user_network_authentication_check.txt", "w") as file:
+            #Store ssid and user input WPA into text file for pico to call from, kill app
+            with open("user_network_authentication_check.txt", "w") as file:
                 network_input = str(selected_ssid + " " + password)
                 file.write(network_input)
                 root.destroy()
         else:
+            #Clear entry
             ssid_entry.delete(0)
     else:
         messagebox.showerror("Error", "Please enter a password")
