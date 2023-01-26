@@ -13,6 +13,15 @@ We're hoping to get just the basic functionality of the bot working, nothing too
   - event driven functions that will action the bot in sequences (arms, body, LED's, buzzer)
   - basic website that publish data input from user to PICO_bot (movement, LED's, text to LED's strip (maybe))
 
+# Software/Hardware Pre-Requisites
+## Hardware
+- Raspberry Pi Pico W
+## Software
+- Thonny (Windows) IDE
+### Packages
+- picozero
+
+
 # Things to learn:
 ## Fundamentals for RPi Pico
 - Programming (flashing?) a pico via serial connectivity 

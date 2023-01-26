@@ -9,8 +9,8 @@ import machine
 # Research into how to flash code to PICO, such that GUI runs on Boot
 
 
-ssid = 'Sherwizzle'
-WPA2 = 'tofuopie8'
+ssid = ''
+WPA2 = ''
 
 def connect():
     #Connect to WLAN
@@ -82,12 +82,15 @@ def serve(connection):
         client.send(html)
         client.close()
         
-try:
-    pico_ip = connect()
-    connection = open_socket(pico_ip)
-    serve(connection)
-    
-except KeyboardInterrupt:
-    machine.reset()
-    
+def main():
+    try:
+        pico_ip = connect()
+        connection = open_socket(pico_ip)
+        serve(connection)
+        
+    except KeyboardInterrupt:
+        machine.reset()
+
+if __name__ == '__main__':
+    main()
 
